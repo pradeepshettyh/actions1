@@ -1,0 +1,7 @@
+name: Pradeep Testing custom action
+runs:
+  using: 'composite'
+  steps:
+    run: |
+      echo "Hello world"
+    shell: bash
