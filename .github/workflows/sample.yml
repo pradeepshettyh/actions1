@@ -21,6 +21,4 @@ jobs:
                 ls
             - name: first step
               uses: ./.github/actions/dataa
-              with:
-                osname: ${{inputs.osname}}
             

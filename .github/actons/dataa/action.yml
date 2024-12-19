@@ -1,20 +1,10 @@
-name: Custo Action Some
-author: Pradeep Shetty
-description: This is a custom action
-inputs:
-  osname: 
-    required: true
-    type: string
-    description: enter browser name
-# outputs:
-#   random-number:
-#     description: "Random number"
-#     value: ${{ steps.random-number-generator.outputs.random-id }}
-runs:
+name: 'testing new stuff'
+description: 'Get dependency and cache them'
+runs: 
   using: 'composite'
   steps:
-    - id: random-number-generator
+    - name: Print workspace name
       run: |
-        echo "random-id=$(echo $RANDOM)" >> $GITHUB_OUTPUT
-        echo "Ths os name ${{inputs.osname}}"
+        echo "workspace name github.workspace"
+        echo "nodeversion is matrix.nodeversion"
       shell: bash
