@@ -27,4 +27,13 @@ jobs:
             - name: some dad
               run: |
                 echo "out is ${{ steps.ke.outputs.somedata }}"
+            - name: using custom tag
+              id: onee
+              uses: pradeepshettyh/actrepo@v3
+              with:
+                username: "Pradeep"
+                password: "Shetty"
+            - name: grab output
+              run: |
+                echo "some ---> ${{ steps.onee.outputs.somedata }}"
             
