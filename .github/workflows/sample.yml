@@ -15,10 +15,12 @@ jobs:
         steps:
             - name: checkout the code
               uses: actions/checkout@v3
+            - name: second step
+              run: |
+                echo "Hello world"
+                ls
             - name: first step
               uses: ./.github/actions/dataa
               with:
                 osname: ${{inputs.osname}}
-            - name: second step
-              run: |
-                echo "Hello world"
+            
