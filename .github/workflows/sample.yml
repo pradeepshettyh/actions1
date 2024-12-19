@@ -13,6 +13,8 @@ jobs:
         name: first job
         runs-on: ${{inputs.osname}}
         steps:
+            - name: checkout the code
+              uses: actions/checkout@v3
             - name: first step
               uses: ./.github/actions/action.yml
             - name: second step
