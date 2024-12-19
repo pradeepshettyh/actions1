@@ -19,4 +19,6 @@ jobs:
               run: |
                 echo "Hello world"
                 ls
+            - name: i am teisng something
+              uses: ./.github/actions/some
             
