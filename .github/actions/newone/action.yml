@@ -5,7 +5,7 @@ inputs:
     description: enter osname
     type: string
 outputs:
-  somedata: ${{ steps.one.outputs.keka }}
+  somedata:
     description: return some data
     value: ${{ steps.one.outputs.keka }}
 runs:
