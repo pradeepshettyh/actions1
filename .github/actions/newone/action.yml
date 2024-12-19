@@ -1,7 +1,19 @@
 name: Pradeep Testing custom action
+inputs:
+  osname:
+    required: true
+    description: enter osname
+    type: string
+outputs:
+  somedata: ${{ steps.one.outputs.keka }}
+    description: return some data
+    value: 
 runs:
   using: 'composite'
   steps:
-    - run: |
+    - name: first step
+      id: one
+      run: |
+        echo "keka=kaka kaka" >> $GITHUB_OUTPUT
         echo "Hello world"
       shell: bash

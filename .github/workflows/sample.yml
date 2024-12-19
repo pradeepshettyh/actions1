@@ -20,5 +20,11 @@ jobs:
                 echo "Hello world"
                 ls
             - name: i am teisng something
+              id: ke
               uses: ./.github/actions/newone
+              with:
+                osname: ${{inputs.osname}}
+            - name: some dad
+              run: |
+                echo "out is ${{ steps.ke.outputs.somedata }}"
             
