@@ -1,0 +1,20 @@
+name: My custom action
+run-name: new custom action
+on: 
+    workflow_dispatch:         
+        inputs:
+            osname: 
+                required: true
+                type: string
+                description: enter browser name
+
+jobs:
+    firstjob:
+        name: first job
+        runs-on: ${{inputs.osname}}
+        steps:
+            - name: first step
+              uses: ./.github/actions/action.yml
+            - name: second step
+              run: |
+                echo "Hello world"
