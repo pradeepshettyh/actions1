@@ -16,7 +16,7 @@ jobs:
             - name: checkout the code
               uses: actions/checkout@v3
             - name: first step
-              uses: ./.github/actions/action.yml
+              uses: ./.github/actions
               with:
                 osname: ${{inputs.osname}}
             - name: second step
