@@ -21,6 +21,7 @@ runs:
   steps:
     - name: first step
       id: firststep
+      shell: bash
       run: |
         echo "Hello you provided firstname ${{ inputs.firstname }} ---> ${{ inputs.lastname }}"
         echo "fname=${{ inputs.firstname }}" >> $GITHUB_OUTPUT
