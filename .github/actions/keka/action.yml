@@ -1,21 +1,21 @@
 name: Custom Action Created by Pradeep
 description: Created to explore custom action
-  inputs:
-    firstname:
-      type: string
-      description: Enter your firstname
-      required: true
-    lastname:
-      type: string
-      description: Enter your lastname
-      required: true
-    outputs:
-      somedata:
-        description: returns some data
-        value: ${{ steps.firststep.outputs.fname }}
-      hellodata:
-        description: retruns some kaka
-       value: ${{ steps.firststep.outputs.lname }}
+inputs:
+  firstname:
+    type: string
+    description: Enter your firstname
+    required: true
+  lastname:
+    type: string
+    description: Enter your lastname
+    required: true
+outputs:
+  somedata:
+    description: returns some data
+    value: ${{ steps.firststep.outputs.fname }}
+  hellodata:
+    description: retruns some kaka
+    value: ${{ steps.firststep.outputs.lname }}
 runs:
   using: 'composite'
   steps:
