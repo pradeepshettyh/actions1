@@ -11,11 +11,11 @@ description: Created to explore custom action
       required: true
     outputs:
       somedata:
-       description: returns some data
-       value: ${{ steps.firststep.outputs.fname }}
-    hellodata:
-      description: retruns some kaka
-      value: ${{ steps.firststep.outputs.lname }}
+        description: returns some data
+        value: ${{ steps.firststep.outputs.fname }}
+      hellodata:
+        description: retruns some kaka
+       value: ${{ steps.firststep.outputs.lname }}
 runs:
   using: 'composite'
   steps:
