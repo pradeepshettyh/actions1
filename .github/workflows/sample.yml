@@ -31,8 +31,8 @@ jobs:
                 lastname: ${{inputs.somename}}
             - name: some kaka
               run: |
-                echo "out is ${{ steps.kin.outputs.fname }}"
-                echo "out is ${{ steps.kin.outputs.lname }}"
+                echo "out is ${{ steps.kin.outputs.somedata }}"
+                echo "out is ${{ steps.kin.outputs.hellodata }}"
             - name: i am teisng something
               id: ke
               uses: ./.github/actions/newone
