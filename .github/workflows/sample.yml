@@ -7,6 +7,10 @@ on:
                 required: true
                 type: string
                 description: enter browser name
+            somename:
+              required: true
+              type: string
+              description: some adasd        
 
 jobs:
     firstjob:
@@ -19,6 +23,16 @@ jobs:
               run: |
                 echo "Hello world"
                 ls
+            - name: some asdasdads
+              id: kin
+              uses: ./.github/actions/keka
+              with:
+                firstname: ${{inputs.osname}}
+                lastname: ${{inputs.somename}}
+            - name: some kaka
+              run: |
+                echo "out is ${{ steps.kin.outputs.fname }}"
+                echo "out is ${{ steps.kin.outputs.lname }}"
             - name: i am teisng something
               id: ke
               uses: ./.github/actions/newone

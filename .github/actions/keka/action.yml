@@ -1,0 +1,27 @@
+name: Custom Action Created by Pradeep
+description: Created to explore custom action
+  inputs:
+    firstname:
+      type: string
+      description: Enter your firstname
+      required: true
+    lastname:
+      type: string
+      description: Enter your lastname
+      required: true
+    outputs:
+      somedata:
+       description: returns some data
+       value: ${{ steps.firststep.outputs.fname }}
+    hellodata:
+      description: retruns some kaka
+      value: ${{ steps.firststep.outputs.lname }}
+runs:
+  using: 'composite'
+  steps:
+    - name: first step
+      id: firststep
+      run: |
+        echo "Hello you provided firstname ${{ inputs.firstname }} ---> ${{ inputs.lastname }}"
+        echo "fname=${{ inputs.firstname }}" >> $GITHUB_OUTPUT
+        echo "lname=${{ inputs.lastname }}" >> $GITHUB_OUTPUT     
